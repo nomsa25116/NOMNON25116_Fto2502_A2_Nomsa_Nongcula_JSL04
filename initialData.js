@@ -40,3 +40,21 @@ const initialTasks = [
     status: "done",
   },
 ];
+
+/**
+ * Function to handle the "+ Add New Task" button click.
+ * Logs a message to the console and shows an alert.
+ */
+function addNewTask() {
+  console.log("Add New Task button was clicked!");
+  alert("Add New Task button clicked!");
+}
+
+// Get the button using document.getElementById
+const addTaskButton = document.getElementById("addTaskBtn");
+
+// Log the button element to verify it's selected
+console.log("Button element:", addTaskButton);
+
+// Attach the function to the button click event
+addTaskButton.addEventListener("click", addNewTask);
