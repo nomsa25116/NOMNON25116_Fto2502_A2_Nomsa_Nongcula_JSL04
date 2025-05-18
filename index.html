@@ -46,7 +46,27 @@
         </div>
         <div class="trigger-button">
             <button id="addTaskBtn" class="add-task-btn">+ Add New Task</button>
+        <div class="overlay" id="taskModal">
+            <div class="modal">
+                <span class="close" id="closeModal">&times;</span>
+                <h2>Add New Task</h2>
+                <form id="taskForm">
+                    <label for="taskTitle">Task Title</label>
+                    <input type="text" id="taskTitle" required />
+                    <label for="taskDescription">Description</label>
+                    <textarea id="taskDescription" required></textarea>
+                    <label for="taskStatus">Status</label>
+                    <select id="taskStatus">
+                        <option value="todo">TODO</option>
+                        <option value="doing">DOING</option>
+                        <option value="done">DONE</option>
+                    </select>
+                    <button id="createTaskBtn" class="create-task-btn">Create Task</button>
+                </form>
+            </div>
         </div>
+        </div>
+
       </header>
 
       <div class="container">

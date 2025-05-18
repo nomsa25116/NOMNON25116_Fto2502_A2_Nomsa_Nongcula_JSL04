@@ -41,20 +41,33 @@ const initialTasks = [
   },
 ];
 
-/**
- * Function to handle the "+ Add New Task" button click.
- * Logs a message to the console and shows an alert.
- */
-function addNewTask() {
-  console.log("Add New Task button was clicked!");
-  alert("Add New Task button clicked!");
-}
+// Element refs
+const openBtn      = document.getElementById('addTaskBtn');
+const closeBtn     = document.getElementById('closeModalBtn');
+const modalOverlay = document.getElementById('taskModal');
+const createBtn    = document.getElementById('createTaskBtn');
 
-// Get the button using document.getElementById
-const addTaskButton = document.getElementById("addTaskBtn");
+// Open modal
+openBtn.addEventListener('click', () => {
+  modalOverlay.style.display = 'flex';
+});
 
-// Log the button element to verify it's selected
-console.log("Button element:", addTaskButton);
+// Close modal
+closeBtn.addEventListener('click', () => {
+  document.getElementById('taskModal').classList.remove('show');
+});
 
-// Attach the function to the button click event
-addTaskButton.addEventListener("click", addNewTask);
+// Create task
+createBtn.addEventListener('click', () => {
+  const title       = document.getElementById('title').value.trim();
+  const description = document.getElementById('description').value.trim();
+  const status      = document.getElementById('status').value;
+
+  if (!title || !description) {
+    alert('Please fill out all fields.');
+    return;
+  }
+
+  console.log('Task Created:', { title, description, status });
+  modalOverlay.style.display = 'none';
+});

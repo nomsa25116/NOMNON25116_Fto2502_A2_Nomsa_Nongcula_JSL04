@@ -133,6 +133,71 @@ header {
 .add-task-btn:hover {
     background-color: #7264e0;
 }
+/* overlay & modal */
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0; top: 0;
+  width: 100vw; 
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+/* Close button */
+.close-btn {
+  top: 10px;
+  right: 15px;
+  border: none;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+/* Close button hover effect */
+.close-btn:hover {
+  color: #635fc7;
+}
+
+/* Form Elements */
+.modal input,
+.modal textarea,
+.modal select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.modal textarea {
+  resize: vertical; /* Prevent resizing */
+  min-height: 100px; /* Minimum height */
+}
+
+.create-task-btn {
+  background-color: #635fc7;
+  color: white;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: 400;
+  width: 100%;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  justify-content: center;
+  align-items: center;
+}
 
 .logo-mobile {
   display: none; /* Hidden on desktop; shown on smaller screens */
