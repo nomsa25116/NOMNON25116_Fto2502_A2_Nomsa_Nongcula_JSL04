@@ -71,3 +71,9 @@ createBtn.addEventListener('click', () => {
   console.log('Task Created:', { title, description, status });
   modalOverlay.style.display = 'none';
 });
+
+// toggle dark mode
+function changeMode() {
+  const element = document.body;
+  element.classList.toggle("dark-mode");
+}

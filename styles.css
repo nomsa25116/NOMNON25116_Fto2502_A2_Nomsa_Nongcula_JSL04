@@ -84,6 +84,66 @@ h4 {
   overflow: hidden; /* Prevents overflowed text/icons from showing */
 }
 
+.theme-toggle {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 24px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none; /* Hide the checkbox */
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 34px;
+  background-color: #635fc7; /* Default background color */
+  transition: .4s; /* Smooth transition */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white; /* Default knob color */
+  border-radius: 50%;
+  transition: .4s; /* Smooth transition */
+}
+
+iput:checked + .slider {
+  background-color: #219c90; /* Background color when checked */
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px); /* Move the knob to the right */
+}
+
+.dark-mode {
+  background-color: #2b2c37; /* Dark mode background */
+}
+
+.dark-mode .side-bar {
+  background-color: #2b2c37; /* Dark mode sidebar */
+}
 /* ===============
    Main Layout
 ================ */
